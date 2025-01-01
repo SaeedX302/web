@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+<head>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <title><data:blog.title/></title>
+    <b:include data='blog' name='variables'/>
+    <b:include data='blog' name='layout'/>
+    <b:include data='blog' name='navigation'/>
+    <b:include data='blog' name='news-sections'/>
+    <b:include data='blog' name='header'/>
+    <b:include data='blog' name='pagination'/>
+</head>
+
+<body>
+    <!-- Top Header with Small Logo and Menu -->
+    <div class='header-top'>
+        <div class='small-logo'>
+            <b:section id='small-header-logo' maxwidgets='1'>
+                <b:widget id='Header2' locked='true' type='Header'/>
+            </b:section>
+        </div>
+        <div class='header-menu'>
+            <b:section id='header-menu' maxwidgets='1'>
+                <b:widget id='HTML6' locked='false' type='HTML'/>
+            </b:section>
+        </div>
+    </div>
+
+    <!-- Main Header with Large Logo -->
+    <div class='header-wrapper'>
+        <div class='header-logo'>
+            <b:section id='header-logo' maxwidgets='1'>
+                <b:widget id='Header1' locked='true' type='Header'/>
+            </b:section>
+        </div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class='nav-menu'>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/search/label/Software'>Software</a></li>
+            <li><a href='/search/label/Games'>Games</a></li>
+            <li><a href='/search/label/Cracks'>Cracks</a></li>
+            <li><a href='/search/label/IDM'>IDM</a></li>
+        </ul>
+    </nav>
+
+    <!-- News Sections -->
+    <div class='ticker-news'>
+        <b:section id='ticker-news' maxwidgets='1'>
+            <b:widget id='HTML1' locked='false' type='HTML'/>
+        </b:section>
+    </div>
+
+    <div class='feature-news'>
+        <b:section id='feature-news' maxwidgets='1'>
+            <b:widget id='HTML2' locked='false' type='HTML'/>
+        </b:section>
+    </div>
+
+    <!-- Content Section -->
+    <div class='content-section'>
+        <div class='main-content'>
+            <b:section id='main' showaddelement='true'>
+                <b:widget id='Blog1' locked='true' type='Blog'/>
+            </b:section>
+            <!-- Pagination -->
+            <div class='pagination'>
+                <b:if cond='data:blog.pageType != &quot;static_page&quot;'>
+                    <b:if cond='data:blog.pageType != &quot;item&quot;'>
+                        <div class='blog-pager' id='blog-pager'>
+                            <b:if cond='data:newerPageUrl'>
+                                <a class='pagination-btn' expr:href='data:newerPageUrl'>← Previous</a>
+                            </b:if>
+                            <b:if cond='data:olderPageUrl'>
+                                <a class='pagination-btn' expr:href='data:olderPageUrl'>Next →</a>
+                            </b:if>
+                        </div>
+                    </b:if>
+                </b:if>
+            </div>
+        </div>
+
+        <div class='sidebar'>
+            <b:section id='sidebar' showaddelement='true'>
+                <b:widget id='HTML3' locked='false' title='Reviews' type='HTML'/>
+                <b:widget id='HTML4' locked='false' title='Advertisement' type='HTML'/>
+                <b:widget id='Label1' locked='false' title='Categories' type='Label'/>
+                <b:widget id='PopularPosts1' locked='false' title='Recent Posts' type='PopularPosts'/>
+                <b:widget id='LinkList1' locked='false' title='Quick Links' type='LinkList'/>
+                <b:widget id='HTML5' locked='false' title='Social Plugins' type='HTML'/>
+                <b:widget id='HTML7' locked='false' title='View All' type='HTML'/>
+            </b:section>
+        </div>
+    </div>
+</body>
+</html>

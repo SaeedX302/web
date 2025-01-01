@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<b:skin><![CDATA[
+/* News Sections */
+.ticker-news {
+    width: 732px;
+    height: 24px;
+    background: #333;
+    margin: 10px auto;
+}
+
+.feature-news {
+    width: 732px;
+    height: 24.8px;
+    background: #444;
+    margin: 10px auto;
+}
+]]></b:skin>
